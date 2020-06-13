@@ -76,7 +76,7 @@ class SecondCard extends StatelessWidget {
             return blue[1];
           else if(country.country.compareTo(cases.elementAt(1).country) == 0) {
             return red[1];
-          } else if(country.country.compareTo(cases.elementAt(3).country) == 0)
+          } else if(country.country.compareTo(cases.elementAt(2).country) == 0)
             return green[1];
           else
             return purple[1];

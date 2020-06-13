@@ -12,13 +12,6 @@ class ThirdCard extends StatefulWidget {
 
   ThirdCard({this.countries});
 
-  final colors = [
-    charts.MaterialPalette.blue.makeShades(2),
-    charts.MaterialPalette.red.makeShades(2),
-    charts.MaterialPalette.purple.makeShades(2),
-    charts.MaterialPalette.green.makeShades(2),
-  ];
-
   @override
   State<StatefulWidget> createState() => _ThirdCardState();
 }
@@ -84,7 +77,7 @@ class _ThirdCardState extends State<ThirdCard> {
                 AspectRatio(
                   aspectRatio: 4 / 2,
                   child: new charts.TimeSeriesChart(
-                    _createSampleData(widget.colors, allData, pos),
+                    _createSampleData(allData, pos),
                     animate: true,
                     defaultRenderer: new charts.LineRendererConfig(),
                     dateTimeFactory: const charts.LocalDateTimeFactory(),
@@ -111,7 +104,14 @@ class _ThirdCardState extends State<ThirdCard> {
     );
   }
 
-  static List<charts.Series<DayOneCountry, DateTime>> _createSampleData(colors, List<List<DayOneCountry>> allData, int pos) {
+  static List<charts.Series<DayOneCountry, DateTime>> _createSampleData(List<List<DayOneCountry>> allData, int pos) {
+    final colors = [
+      charts.MaterialPalette.blue.makeShades(2),
+      charts.MaterialPalette.red.makeShades(2),
+      charts.MaterialPalette.green.makeShades(2),
+      charts.MaterialPalette.purple.makeShades(2),
+    ];
+
     List<charts.Series<DayOneCountry, DateTime>> result = new List<charts.Series<DayOneCountry, DateTime>>();
     for(int i=0; i<4; i++){
       result.add(new charts.Series<DayOneCountry, DateTime>(
@@ -134,9 +134,11 @@ class _ThirdCardState extends State<ThirdCard> {
 
   //Exibe os valores
   Widget showValues({ int index, List<DayOneCountry> countries }){
+    final legendColors = [Colors.blue, Colors.red, Colors.green, Colors.purple];
+
     return new Row(
       children: <Widget>[
-        Container(color: Color(int.parse(widget.colors[index][1].hexString.replaceAll("#", "0xff"))), width: 15, height: 15),
+        Container(color: legendColors[index], width: 15, height: 15),
         SizedBox(width: 5),
         Text(widget.countries.elementAt(index).countryCode),
         SizedBox(width: 10),
