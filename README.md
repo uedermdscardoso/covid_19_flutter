@@ -2,7 +2,7 @@
 
 Mobile Version
 
-## Data API
+## API
 
 URL: https://covid19api.com/
 
