@@ -81,7 +81,7 @@ class _LegendState extends State<Legend> {
                     labelStyle: TextStyle(
                       color: Colors.white,
                       fontSize: 22,
-                    )
+                    ),
                   ),
                 ),
                 Expanded(

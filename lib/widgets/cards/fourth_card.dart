@@ -29,11 +29,13 @@ class _FourthCardState extends State<FourthCard> {
             style: TextStyle(color: Colors.deepOrange, fontSize: 20, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 15),
-          //Access an API that was used in this app to show COVID19 data
-          Text( //Use this API to get COVID19 data
-            "Acesse a api que foi usada neste aplicativo para apresentar os dados da COVID 19.",
-            style: TextStyle(fontSize: 15),
-            textAlign: TextAlign.center,
+          Container(
+            width: 250,
+            child: Text(
+              "Know the API used in this app to show COVID 19 data.",
+              style: TextStyle(fontSize: 15),
+              textAlign: TextAlign.center,
+            ),
           ),
           SizedBox(height: 15),
           Container(
@@ -63,7 +65,7 @@ class _FourthCardState extends State<FourthCard> {
               highlightColor: Colors.deepOrange,
               disabledTextColor: Colors.deepOrange,
               textColor: _buttonPressed ? Colors.white : Colors.deepOrange,
-              child: Text("ACESSAR SITE"),
+              child: Text("ACCCESS WEBSITE"),
             ),
           )
         ],

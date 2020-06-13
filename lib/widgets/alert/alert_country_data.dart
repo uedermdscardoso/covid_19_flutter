@@ -63,9 +63,12 @@ class AlertCountryData extends StatelessWidget {
         ),
       ),
       actions: <Widget>[
-        FlatButton(
-          child: Text('OK', style: TextStyle(color: Colors.deepOrange[800], fontSize: 18)),
-          onPressed: () => Navigator.of(context).pop(),
+        Padding(
+          padding: const EdgeInsets.only(right: 12, bottom: 12),
+          child: GestureDetector(
+            child: Text('OK', style: TextStyle(color: Colors.deepOrange[800], fontSize: 18, fontWeight: FontWeight.bold)),
+            onTap: () => Navigator.of(context).pop(),
+          ),
         ),
       ],
     );
