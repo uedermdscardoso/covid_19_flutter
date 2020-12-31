@@ -46,9 +46,9 @@ class _FourthCardState extends State<FourthCard> {
               border: Border.all(width: 0.5, color: Colors.deepOrange)
             ),
             child: RaisedButton(
-              onPressed: () async => {
+              onPressed: () async {
                 if(await canLaunch(URL)){
-                  await launch(URL, forceSafariVC: false)
+                  await launch(URL, forceSafariVC: false);
                 }
               },
               onHighlightChanged: (pressed) {

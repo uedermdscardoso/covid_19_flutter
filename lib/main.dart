@@ -27,7 +27,17 @@ class Home extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.deepOrangeAccent,
       ),
-      home: Dashboard(),
+      home: AnnotatedRegion<SystemUiOverlayStyle>(
+        value: SystemUiOverlayStyle(
+          statusBarColor: Colors.transparent,
+          statusBarBrightness: Brightness.dark,
+          statusBarIconBrightness: Brightness.dark,
+          systemNavigationBarColor: Colors.black,
+          systemNavigationBarIconBrightness: Brightness.dark,
+          systemNavigationBarDividerColor: Colors.black,
+        ),
+        child: Dashboard()
+      ),
     );
   }
 }
