@@ -39,7 +39,7 @@ class FirstCard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Padding(padding: EdgeInsets.only(bottom: 8), child: Text(title)),
-                        Text(Global.formatNumber(number: information.totalConfirmed),style: TextStyle(color: Colors.redAccent, fontSize: 40, fontWeight: FontWeight.bold)),
+                        Text(Global.formatNumber(number: information.totalConfirmed),style: TextStyle(color: Colors.redAccent, fontSize: 30, fontWeight: FontWeight.bold)),
                         Text("confirmed",style: TextStyle(color: Colors.redAccent, fontSize: 16)),
 
                         Padding(
@@ -52,7 +52,7 @@ class FirstCard extends StatelessWidget {
                                 padding: EdgeInsets.only(right: 8),
                                 child: Column(
                                   children: <Widget>[
-                                    Text(Global.formatNumber(number: information.totalRecovered), style: TextStyle(color: Colors.lightGreen, fontSize: 30, fontWeight: FontWeight.bold)),
+                                    Text(Global.formatNumber(number: information.totalRecovered), style: TextStyle(color: Colors.lightGreen, fontSize: 20, fontWeight: FontWeight.bold)),
                                     Text("recovered",style: TextStyle(color: Colors.lightGreen, fontSize: 16)),
                                   ],
                                 ),
@@ -61,7 +61,7 @@ class FirstCard extends StatelessWidget {
                                 padding: EdgeInsets.only(left: 8),
                                 child: Column(
                                   children: <Widget>[
-                                    Text(Global.formatNumber(number: information.totalDeaths), style: TextStyle(color: Colors.grey, fontSize: 30, fontWeight: FontWeight.bold)),
+                                    Text(Global.formatNumber(number: information.totalDeaths), style: TextStyle(color: Colors.grey, fontSize: 20, fontWeight: FontWeight.bold)),
                                     Text("deaths",style: TextStyle(color: Colors.blueGrey, fontSize: 16)),
                                   ],
                                 ),

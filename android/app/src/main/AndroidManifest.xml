@@ -9,8 +9,8 @@
 
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="covid19flutter"
-        android:icon="@mipmap/ic_launcher">
+        android:label="Covid 19 Tracker"
+        android:icon="@mipmap/ic_covid_19">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

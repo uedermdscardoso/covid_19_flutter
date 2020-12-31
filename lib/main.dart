@@ -30,10 +30,10 @@ class Home extends StatelessWidget {
       home: AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,
-          statusBarBrightness: Brightness.dark,
-          statusBarIconBrightness: Brightness.dark,
+          statusBarBrightness: Brightness.light,
+          statusBarIconBrightness: Brightness.light,
           systemNavigationBarColor: Colors.black,
-          systemNavigationBarIconBrightness: Brightness.dark,
+          systemNavigationBarIconBrightness: Brightness.light,
           systemNavigationBarDividerColor: Colors.black,
         ),
         child: Dashboard()
